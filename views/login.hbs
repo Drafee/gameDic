@@ -1,0 +1,23 @@
+<div class = 'regiTitle'>
+<h1 class = 'regih1'>Log in</h1>
+</div>
+
+{{> backToHome}}
+
+{{#if message.error}}
+<h2>message.error</h2>
+{{/if}}
+
+</if>
+<form class = "loginForm" method="POST" action="">
+	<div class='form-row'><label>Username:</label> <input class='regiInput' name="username" type="text" required><label class = 'err'>{{err1}}</label></div>
+	<div class='form-row'><label>Password:</label> <input class='regiInput' name="password" type="password" required>
+	<br><label class = 'err'>{{err2}}</label></div>
+	<div class='form-row-reminder'>Don't have an account? <a href="/register">Register</a></div>
+	<div class='form-row' id = 'login2BtnDiv'><input id = 'login2Btn'type="submit" value="Login"></div>
+
+</form>
+
+<script>
+    document.querySelector('#bodyImg').style.filter = 'blur(2px)';
+</script>

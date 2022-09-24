@@ -1,0 +1,49 @@
+
+
+<br>
+<h2 class = 'gameName'>{{game.name}}</h2>
+<div class = 'gamePic'>
+    <img class = 'gameImg' src = {{img.url}}>
+</div>
+<div class = 'heartDiv'>
+    <label class = 'heart'>❤</label>
+
+</div>
+<div class = 'gameInfo'>
+<h2>Platform: {{game.platform}}</h2> 
+<h3>Year: {{game.year}}</h3>
+Official Website: <a href = {{game.website}} target="_blank">{{game.website}}</a>
+</div>
+
+<div class = 'gameReviewDiv'>
+
+<table class = 'reviewsTable'>
+    <h3>Reviews</h3>
+
+    {{#each game.reviews as |r|}}
+        <tr>
+            <td class = 'reviewDate'>{{r.date}}</td>
+            <td class = 'reviewUser'> {{r.user}}</td>
+            <td class = 'reviewContent'>{{r.contents}}</td>
+        </tr>
+    {{/each}}
+</table>
+
+
+<div class = 'writeReviewDiv'>
+    <form class = 'writeForm' method = 'POST' action = ''>
+        <textarea class = 'write'
+        rows = "10" cols = "60" placeholder="Enter your review... "></textarea>
+        <input class = 'writeBtn' type = 'submit' >
+    </form>
+
+</div>
+<br>
+<br>
+<br>
+</div>
+
+<script src = '../writeClick.js'></script>
+
+
+{{> backToDic}}

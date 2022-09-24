@@ -1,0 +1,13 @@
+<div class = 'regiTitle'>
+	<h1 class = 'regih1'>Register</h1>	
+</div>
+
+{{> backToHome}}
+<div class = 'regiForm'>
+	<form method="POST" action="">
+		<div class='form-row'><label>Username:</label> <br><input class='regiInput' name="username" type="text" required><label class = 'err'>{{err1}}</label></div>
+		<div class='form-row'><label>Password:</label> <br><input class='regiInput' name="password" type="password" required></div>
+		<div class='form-row'><label>Password Again:</label> <br><input class='regiInput' name="password2" type="password" required><br><label class = 'err'>{{err2}}</label></div>
+		<div class='form-row' id = 'regi2BtnDiv'><input id = 'regi2Btn' type="submit" value="Register"></div>
+	</form>
+</div>

@@ -1,0 +1,60 @@
+{{> logout}}
+<h2 class = 'personal'>personal-page</h2>
+
+
+<div class = 'userInterface'>
+    <div class = 'userNameDiv'>
+        <label> Dear</label>
+        <label class = 'userName'>{{name}}</label>
+    </div>
+
+    <div class = 'userImgDiv'>
+        <image class = 'userImg' src = '../public/imgs/default.jpg'>
+        </image>
+        {{!-- <form method = 'POST' action = '/upload'>
+        <input type="file" id="myfile" name="myfile">
+        <input type='submit'>
+        </form> --}}
+    </div>
+
+    <div class = 'gameDicDiv'>
+    <a href = '/gamedic'>
+        <button class = 'gameDic' type = "button">🎮 Dictionary!</button>
+    </a>
+    </div>
+    <div class = 'favoratesDiv'>
+    <a href = '/personal-page/favorates' class = 'favoratesLink'>
+        <h3 class = 'favorates'>Check ❤</h3>
+    </a>
+    </div>
+
+    <div class = 'myReviewsDiv'>
+    {{!-- <a href = '/personal-page/reviews'> --}}
+        <button class = 'myReviewBtn' type = "button">📒My Reviews</button>
+    {{!-- </a> --}}
+    </div>
+</div>
+
+
+
+<a href = '/gameTrivia'>
+    <button class = 'trviaButton' type = "button">Game Trivia!</button>
+</a>
+
+
+<div class = 'todayGameDiv'>
+
+    <h3 class = 'todayGame'>GAME Recommendation</h3>
+    <br>
+    <a href = '/{{game.name}}'>{{game.name}}</a>
+    <br>
+    <label class = 'gameYear'>Issue Year: {{game.year}}</label>
+    <br>
+    <label class = 'gameLink'> Official Website: </label>
+        <a href = {{game.website}} target="_blank">🔗</a>
+</div>
+
+<script src = '../pageClick.js'>
+
+</script>
+

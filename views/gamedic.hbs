@@ -1,0 +1,56 @@
+
+
+<div class = 'dic'>
+<h1 class = 'gameDicH1'>Game dictionary</h1>
+<form class = 'dicForm' method = 'POST' action = ''>
+    <div id = "year"> 
+        Year <input name = 'year' type = 'Number'>
+    </div>
+    <div id = "platforms">
+        <label class = 'platform'>Platform:   </label>
+        &nbsp;&nbsp;
+        <label for="Nintendo Switch"> Nintendo Switch</label>
+        <input type="checkbox" id = "Nintendo Switch" name = "Nintendo Switch" value="Nintendo Switch">
+
+        <label for="Xbox"> Xbox</label>
+        <input type="checkbox" id="Xbox" name="Xbox" value="Xbox">
+
+        <label for="PS"> PS</label>
+        <input type="checkbox" id="PS" name="PS" value="PS">
+
+        <label for="PC"> PC</label> 
+        <input type="checkbox" id="PC" name="PC" value="PC">
+
+        <label for="Other"> Other</label>      
+        <input type="checkbox" id="Other" name="Other" value="Other">
+             
+    </div>
+    <input class = 'submit' type = 'submit'>
+</form>
+
+<table class = 'gameTable'>
+<tr>
+    <th>Game</th>
+    <th>Year of Publish</th>
+    <th>Platforms</th>
+</tr>
+
+{{#each game as |g|}}
+<tr>
+    <td><a href = '/{{g.name}}'>{{g.name}}</a></td>
+    <td>{{g.year}}</td> 
+    <td>{{g.platform}}</td>
+</tr>
+{{/each}}  
+</table>
+<br>
+
+<label>In total: {{count}} games</label>
+
+</div>
+{{> backToPersonal}}
+
+<script>
+    document.querySelector('#container').style.backgroundColor = "transparent";
+    document.querySelector('.dic').style.backgroundColor = "RGB(238, 216, 213, 0.8)";
+</script>
